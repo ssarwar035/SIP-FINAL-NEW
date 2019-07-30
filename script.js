@@ -144,8 +144,8 @@ function myFunction(){
 	var formInput = d3.select("#forminput");
 	var formValue = formInput.property("value");
 	console.log(formValue);
-	var emission = (formValue*52/.22);
-	d3.select("#calc").text(`The total carbon foot print for ${formValue} is${emission}`);
+	var emission = (formValue*404)/1000;
+	d3.select("#calc").text(`The total amount of carbon footprint emitted for ${formValue} miles is ${emission} Kilograms `);
 }
 
 
