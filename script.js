@@ -140,12 +140,16 @@
 // 	});
 // });
 
+function setTwoNumberDecimal(el) {
+        el.value = parseFloat(el.value).toFixed(2);
+    };
+
 function myFunction(){
 	var formInput = d3.select("#forminput");
 	var formValue = formInput.property("value");
 	console.log(formValue);
-	var emission = (formValue*404)/1000;
-	d3.select("#calc").text(`The total amount of carbon footprint emitted for ${formValue} miles is ${emission} Kilograms `);
+	var emission = ([(formValue*52)/23.6]*19.4*(100/95)/1000).toFixed(2)
+	d3.select("#calc").text(`The total amount of carbon footprint emitted for ${formValue} miles is ${emission} pounds `);
 }
 
 
